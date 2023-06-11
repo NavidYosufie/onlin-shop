@@ -36,32 +36,23 @@
             <form class="login100-form validate-form" method="post">
                 {% csrf_token %}
                 <span class="login100-form-title">
-						 Login
+						 CheckOtp
 					</span>
 
 
-                {% if form.phone.errors %}
-                    <div class="alert alert-danger">{{ form.phone.errors }}</div>
+                {% if form.code.errors %}
+                    <div class="alert alert-danger">{{ form.code.errors }}</div>
                 {% endif %}
                 <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                    {{ form.phone }}
+                    {{ form.code }}
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 						</span>
                 </div>
-
-                {#					<div class="wrap-input100 validate-input" data-validate = "Password is required">#}
-                {#						{{ form.password }}#}
-                {#						<span class="focus-input100"></span>#}
-                {#						<span class="symbol-input100">#}
-                {#							<i class="fa fa-lock" aria-hidden="true"></i>#}
-                {#						</span>#}
-                {#					</div>#}
-
                 <div class="container-login100-form-btn">
                     <button class="login100-form-btn">
-                        Send
+                        Login
                     </button>
                 </div>
 

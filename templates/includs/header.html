@@ -84,7 +84,7 @@
                                 </li>
                                 <li>
                                     <ul style="opacity: 1; color: white; background-color: black; border-color: white; border-radius: 10%;">
-                                        <a>Sign up</a></ul>
+                                        <a href="{% url "account:register" %}">Sign up</a></ul>
                                 </li>
                             {% endif %}
                             {% if request.user.is_authenticated %}
