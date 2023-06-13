@@ -80,11 +80,8 @@
                                     <ul><a></a></ul>
                                 </li>
                                 <li>
-                                    <ul><a href="{% url 'account:login' %}">Sign in</a></ul>
-                                </li>
-                                <li>
                                     <ul style="opacity: 1; color: white; background-color: black; border-color: white; border-radius: 10%;">
-                                        <a href="{% url "account:register" %}">Sign up</a></ul>
+                                        <a href="{% url "account:register" %}">Sign up / Sign in</a></ul>
                                 </li>
                             {% endif %}
                             {% if request.user.is_authenticated %}
