@@ -6,7 +6,6 @@ from django.views import View
 from . import forms
 import ghasedakpack
 from random import randint
-from django.utils.crypto import get_random_string
 import uuid
 from .models import Otp, User
 
