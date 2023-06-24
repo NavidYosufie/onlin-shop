@@ -1,15 +1,16 @@
-from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
-from django.urls import reverse
 from django.views.generic import TemplateView
+from django.shortcuts import render, redirect
+from django.urls import reverse
 from django.views import View
-from . import forms
-import ghasedakpack
-from random import randint
-import uuid
 from .models import Otp, User
+from random import randint
+import ghasedakpack
+from . import forms
+import uuid
 
 sms = ghasedakpack.Ghasedak("16e061d580d3128b17f425aee0a4be090e5e7bfc11e3a02c9c80f1d6c5961e65")
+
 
 class LoginView(View):
     def get(self, request):

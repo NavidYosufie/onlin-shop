@@ -1,13 +1,12 @@
-from django import forms
-from django.core import validators
 from django.core.exceptions import ValidationError
-
+from django.core import validators
 from account.models import User
+from django import forms
 
 
 class LoginForm(forms.Form):
     phone = forms.CharField(widget=forms.TextInput(attrs={'class': 'input100', 'placeholder': 'Phone number'}),
-                            validators=[validators.MaxLengthValidator(11), validators.MinLengthValidator(11)])
+                            validators=[validators.MinLengthValidator(11)])
     password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'input100', 'placeholder': 'Password'}),
                                validators=[validators.MinLengthValidator(4)])
 
